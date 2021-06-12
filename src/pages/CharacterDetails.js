@@ -30,6 +30,8 @@ export default class FilmDetails extends React.Component {
             width={20}
             timeout={3000}
         />
+        let weight = this.state.character.mass
+        weight += this.state.character.mass === 'unknown' ? '' : 'kg'
         return (
             this.state.loading ? loader : (
                 <div>
@@ -37,7 +39,7 @@ export default class FilmDetails extends React.Component {
                     <p>Eye Colour: {this.state.character.eye_color}</p>
                     <p>Hair Colour: {this.state.character.hair_color}</p>
                     <p>Height: {this.state.character.height}cm</p>
-                    <p>Weight: {this.state.character.mass}kg</p>
+                    <p>Weight: {weight}</p>
                 </div>
             )
         )

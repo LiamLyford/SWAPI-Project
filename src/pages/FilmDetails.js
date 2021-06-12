@@ -28,12 +28,12 @@ export default class FilmDetails extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className='container'>
                 <h2>Star Wars Episode {this.state.film.episode_id}, {this.state.film.title}</h2>
                 <h3>About:</h3>
                 <p>{this.state.film.opening_crawl}</p>
-                <h3>Release Date:</h3>
-                <p>{this.state.film.release_date}</p>
+                <h3 style={{display: 'inline'}}>Release Date: </h3>
+                <p style={{display: 'inline'}}>{this.state.film.release_date}</p>
                 <ul>Characters: {this.state.characters}</ul>
             </div>
         )

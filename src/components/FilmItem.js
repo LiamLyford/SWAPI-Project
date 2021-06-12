@@ -15,7 +15,7 @@ export default class FilmItem extends React.Component {
                         className='film'
                         onMouseEnter={() => this.setState({ isShown: true })}
                         onMouseLeave={() => this.setState({ isShown: false })}>{this.props.name}</h1>
-                    <p style={{ display: this.state.isShown ? 'block' : 'none' }}>{this.props.desc}</p>
+                    <p style={{ width: 500, display: this.state.isShown ? 'block' : 'none' }}>{this.props.desc}</p>
                 </div>
             </Link>
         )

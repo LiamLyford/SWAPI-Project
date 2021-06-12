@@ -37,7 +37,7 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='container'>
                 {this.state.films}
             </div>
         )

@@ -10,13 +10,15 @@ function App() {
   return (
     <div className="App">
       {/* <header className="App-header"> */}
-      <Switch>
+      <main id='main'>
+        <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/film/:id" component={FilmDetails} />
           <Route path="/character/:id" component={CharacterDetails} />
           <Route component={Error} />
         </Switch>
-      {/* </header> */}
+        {/* </header> */}
+      </main>
     </div>
   );
 }
