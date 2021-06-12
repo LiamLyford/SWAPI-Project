@@ -1,12 +1,12 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Loader from 'react-loader-spinner';
 
-export default class Character extends React.Component {
-    constructor() {
-        super();
-        this.state = { loading: true, character: {} };
+export default class CharacterItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { loading: true, character: {}, id: '' };
     }
 
     async componentDidMount() {
@@ -17,7 +17,7 @@ export default class Character extends React.Component {
         } catch {
             api = 'error'
         }
-        this.setState({ character: api.data, loading: false })
+        this.setState({ character: api.data, loading: false, id: api.data.name })
     }
 
     render() {
@@ -29,11 +29,11 @@ export default class Character extends React.Component {
             timeout={3000}
         />
         return (
-            // <Link to={`/film/${this.props.id}`}>
-            <div>
-                {this.state.loading ? loader : <li>{this.state.character.name}</li>}
-            </div>
-            // </Link>
+            <Link to={`/character/${this.state.id}`}>
+                <div>
+                    {this.state.loading ? loader : <li>{this.state.character.name}</li>}
+                </div>
+            </Link>
         )
     }
 }
