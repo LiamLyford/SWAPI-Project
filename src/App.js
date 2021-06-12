@@ -8,13 +8,13 @@ import Error from './pages/Error'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
       <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/film/:id" component={FilmDetails} />
           <Route component={Error} />
         </Switch>
-      </header>
+      {/* </header> */}
     </div>
   );
 }

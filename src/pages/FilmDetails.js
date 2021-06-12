@@ -57,7 +57,11 @@ export default class FilmDetails extends React.Component {
         //     <p>{character.name}</p>) : null
         return (
             <div>
-                <p>Star Wars Episode {this.state.film.episode_id}, {this.state.film.title}</p>
+                <h2>Star Wars Episode {this.state.film.episode_id}, {this.state.film.title}</h2>
+                <h3>About:</h3>
+                <p>{this.state.film.opening_crawl}</p>
+                <h3>Release Date:</h3>
+                <p>{this.state.film.release_date}</p>
                 <ul>Characters: {this.state.characters}</ul>
             </div>
         )
